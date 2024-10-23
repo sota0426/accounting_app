@@ -1,0 +1,35 @@
+{
+  "name": "accounting-app",
+  "version": "1.0.0",
+  "description": "Your standalone Windows app description",
+  "main": "main.js",
+  "bin": {
+    "accounting-app": "server.js"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "win-unpacked": "electron-builder --win --dir"
+  },
+  "build": {
+    "appId": "com.yourcompany.accounting-app",
+    "productName": "Accounting App",
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "open": "^8.0.9"
+  },
+  "devDependencies": {
+    "electron": "^31.4.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

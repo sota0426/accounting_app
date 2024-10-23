@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メニュー登録</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html">メニュー登録</a>
+        <a href="accounting.html">会計処理</a>
+        <a href="history.html">会計履歴</a>
+    </div>
+
+    <div id="menuRegistration" class="content">
+        <h1>メニュー登録</h1>
+        <h2>【カテゴリ登録】</h2>
+        <button id="toggleCategoryButton">カテゴリ一覧の表示/非表示</button>
+        <form id="categoryForm" class="horizontal-form">
+            <label for="categoryName">カテゴリ名:</label>
+            <input type="text" id="categoryName" name="categoryName" required>
+            <button type="submit">登録</button>
+        </form>
+        
+        <div id="categoryList"></div>
+        <br>
+        <br>
+        <br>
+
+        <hr>
+        <br>
+        <h2>【メニュー登録】</h2>
+
+        <form id="menuForm" class="horizontal-form">
+            <!-- カテゴリ名のプルダウンメニュー -->
+            <label for="menuCategoryName">カテゴリ名:</label>
+            <select id="menuCategoryName" class="category-name" name="menuCategoryName" required>
+                <!-- カテゴリがここに動的に追加されます -->
+            </select>
+
+            <div class="form-width">
+                <label for="menuName">メニュー名:</label>
+                <input type="text" id="menuName" name="menuName" required>
+                <label for="price">金額:</label>
+                <input type="number" id="price" name="price" required>
+                <label for="stock">残数:</label>
+                <input type="number" id="stock" name="stock" required>
+                <button type="submit">登録</button>
+            </div>
+        </form>
+
+        <br>
+        <div id="menuList"></div>
+        <br>
+        <p style="font-size: small;">※[ ↑ ][ ↓ ] ボタンで同カテゴリ内のメニューの順序を入れ替えることができます。</p>
+        <p style="font-size: small;">※エンターキーで次のセル、および登録ボタンを押すことができます。連続登録が可能です。</p>
+        <br><br><br>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

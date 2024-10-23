@@ -1,0 +1,113 @@
+/* メニュー画面のスタイル */
+.menu-screen {
+    flex: 4;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+/* テーブルのスタイル */
+#menuTable {
+    width: 100%;
+    border-collapse: collapse; /* セルの間の境界線を一つにする */
+    margin-top: 20px;
+    border: 1px solid #ddd; /* テーブル全体に枠線を追加 */
+}
+
+#menuTable th, #menuTable td {
+    border: 1px solid #ddd; /* 各セルに枠線を追加 */
+    padding: 8px;
+    text-align: left;
+}
+
+#menuTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.menu-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-price, .menu-stock {
+    font-size: 14px;
+    color: #555;
+}
+
+/* カテゴリ行のスタイル */
+.category-row {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.category-row td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* メニュー項目の行のスタイル */
+.menu-row td {
+    padding: 8px;
+    text-align: left;
+}
+
+.menu-row td.menu-id {
+    font-weight: bold;
+}
+
+/* 操作ボタンのスタイル */
+.menu-plus, .menu-minus {
+    background-color: #4CAF50; /* 緑色 */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-minus {
+    background-color: #f44336; /* 赤色 */
+}
+
+.menu-plus:hover, .menu-minus:hover {
+    opacity: 0.8;
+}
+
+.change{
+    text-decoration:underline;
+}
+
+#orderList {
+    border: 2px solid #ccc; /* 四角い枠の色と太さを設定 */
+    padding: 10px; /* 枠と内容の間に余白を追加 */
+    border-radius: 5px; /* 角を少し丸める */
+    margin-top: 10px; /* 上部に少し余白を追加 */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+}
+.menu-screen, .order-screen {
+    overflow-y: auto;
+}
+.menu-screen {
+    flex: 3;
+}
+.order-screen {
+    flex: 2;
+}
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+    .menu-screen, .order-screen {
+        width: 100%;
+    }
+}

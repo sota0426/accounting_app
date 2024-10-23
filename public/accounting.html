@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会計処理</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="accounting.css">
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html">メニュー登録</a>
+        <a href="accounting.html">会計処理</a>
+        <a href="history.html">会計履歴</a>
+    </div>
+    <div class="content-container">
+        <!-- メニュー画面 -->
+        <div class="menu-screen">
+            <h2>【注文メニュー】</h2>
+            <button id="toggleSoldOutButton">売り切れ商品を非表示</button> <!-- ボタンを追加 -->
+            <table id="menuTable">
+                <thead>
+                    <tr>
+                        <th>カテゴリ</th>
+                        <th>メニュー名</th>
+                        <th>金額</th>
+                        <th>残数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- メニュー項目がここに表示されます -->
+                </tbody>
+            </table>
+        </div>
+        
+        
+
+
+        
+        <!-- 注文画面 -->
+        <div class="order-screen">
+            <h2>【注文内容】</h2>
+            <div id="orderList">
+                <!-- 注文されたメニューがここに表示されます -->
+            </div>
+            <br>
+            <hr>
+            <div id="total">
+                <h2>合計金額: ¥<span id="totalAmount">0</span></h2>
+            </div>
+            <br>
+            <div class="payment-section">
+                <label for="paymentAmount">支払金額:  </label>
+                <input type="number" class="paymentAmount" id="paymentAmount" placeholder="金額を入力" min="0">
+            </div>
+            <br><br>
+            <hr>
+            <button id="orderButton" onclick="orderPayment()">注文</button>
+            <button id="orderCancelButton" onclick="orderCancelButton()">キャンセル</button>
+            <br><br>
+            <div id="change" class="change"></div>
+        </div>
+    </div>
+    <script src="accounting.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# node_modules ディレクトリを無視
+node_modules/
+
+# dist ディレクトリを無視
+dist/
+
+# ログファイル
+*.log
+
+# Windows系のシステムファイルを無視
+Thumbs.db
+.DS_Store

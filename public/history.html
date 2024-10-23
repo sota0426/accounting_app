@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="history.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>会計履歴</title>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html">メニュー登録</a>
+        <a href="accounting.html">会計処理</a>
+        <a href="history.html">会計履歴</a>
+    </div>
+
+    <div id="history">
+        <h1>会計履歴</h1>
+
+        <!-- 注文履歴セクション -->
+        <div id="orderHistory">
+            <h2>【注文履歴】</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>注文番号</th>
+                        <th>注文メニュー</th>
+                        <th>小計</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 注文履歴がここに表示されます -->
+                </tbody>
+            </table>
+            <p>※「注文キャンセル」を押すと残数が戻ります。</p>
+        </div>
+        <br>
+        <hr>
+
+        <!-- 注文合計セクション -->
+        <div id="orderTotal">
+            <h2>【メニュー別売り上げ】</h2>
+            <table id="totalTable">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>メニュー名</th>
+                        <th>金額</th>
+                        <th>注文数</th>
+                        <th>小計</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 注文合計がここに表示されます -->
+                </tbody>
+            </table>
+            <div id="totalAmount"></div>
+        </div>
+        <button onclick="downloadSalesData()">売り上げデータをダウンロード</button>
+
+    </div>
+    <div id="downloadSection">
+    </div>
+    <script src="history.js"></script>
+</body>
+</html>

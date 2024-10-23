@@ -1,0 +1,134 @@
+
+/* 会計履歴と注文合計のセクション */
+#history {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* カテゴリ行と同じ背景色 */
+    font-weight: bold;
+}
+
+td button {
+    padding: 5px 10px;
+    background-color: #f44336; /* 赤色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+td button:hover {
+    opacity: 0.8;
+}
+
+/* 注文合計の金額表示 */
+#totalAmount {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* メニュー画面のスタイル */
+.menu-screen {
+    flex: 4;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+/* テーブルのスタイル */
+#menuTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+#menuTable th, #menuTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#menuTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.menu-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-price, .menu-stock {
+    font-size: 14px;
+    color: #555;
+}
+
+/* カテゴリ行のスタイル */
+.category-row {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.category-row td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* メニュー項目の行のスタイル */
+.menu-row td {
+    padding: 8px;
+    text-align: left;
+}
+
+.menu-row td.menu-id {
+    font-weight: bold;
+}
+
+/* 操作ボタンのスタイル */
+.menu-plus, .menu-minus {
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menu-minus {
+    background-color: #f44336;
+}
+
+.menu-plus:hover, .menu-minus:hover {
+    opacity: 0.8;
+}
+
+/* 注文リストのスタイル */
+#orderList {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
