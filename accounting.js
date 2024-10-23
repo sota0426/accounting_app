@@ -201,7 +201,7 @@ function orderPayment() {
     if (change < 0) {
         changeDisplay.textContent = "金額が不足しています。";
     } else {
-        changeDisplay.textContent = `おつり金額: ¥${change}`;
+        changeDisplay.innerHTML = `おつりは <span style="font-size: 1.5em; color: red;">¥${change}</span> です。`;
         
         const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
         orderHistory.push({ items: Object.values(orders), total: totalAmount });
@@ -210,8 +210,42 @@ function orderPayment() {
         updateOrderDisplay();
         updateTotalAmount();
         startOrder = false;
+
+        disableOrderButtons();  // 注文ボタンを無効化
+        document.getElementById('nextOrderButton').style.display = 'block';  // 「次の会計に進む」ボタンを表示
     }
 
     paymentInput.value = "";
     focusPaymentInput();
 }
+
+
+
+document.getElementById('nextOrderButton').addEventListener('click', resetForNextOrder);
+
+function disableOrderButtons() {
+    document.querySelectorAll('button.menu-plus').forEach(button => {
+        button.disabled = true;
+        button.style.backgroundColor = '#ccc';
+    });
+}
+
+function enableOrderButtons() {
+    document.querySelectorAll('button.menu-plus').forEach(button => {
+        button.disabled = false;
+        button.style.backgroundColor = '#4CAF50';
+    });
+}
+
+function resetForNextOrder() {
+    orders = {};  // 注文内容のリセット
+    totalAmount = 0;  // 合計金額のリセット
+    document.getElementById('totalAmount').textContent = totalAmount;
+    document.getElementById('change').textContent = ''; // おつりのリセット
+
+    enableOrderButtons();  // 注文ボタンを再び有効化
+
+    document.getElementById('nextOrderButton').style.display = 'none';  // 「次の会計に進む」ボタンを非表示
+    focusPaymentInput();
+}
+

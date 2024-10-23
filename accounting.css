@@ -79,9 +79,12 @@
     opacity: 0.8;
 }
 
-.change{
-    text-decoration:underline;
+.change {
+    font-size: 1.5em; /* テキストを大きくする */
+    text-align: center; /* テキストを中央に配置する */
+    margin-top: 20px; /* 上部に余白を追加 */
 }
+
 
 #orderList {
     border: 2px solid #ccc; /* 四角い枠の色と太さを設定 */
@@ -110,4 +113,66 @@
     .menu-screen, .order-screen {
         width: 100%;
     }
+}
+/* ボタンのスタイル */
+button {
+    background: linear-gradient(135deg, #4CAF50, #45A049); /* グリーングラデーション */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 8px; /* ボタンの角を丸める */
+    transition: all 0.3s ease; /* スムーズなエフェクト */
+}
+
+button:active {
+    background-color: #3e8e41; /* 押したときの色 */
+    transform: translateY(4px); /* 押したときの沈み効果 */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #45A049, #4CAF50); /* ホバー時にグラデーションの色を反転 */
+}
+
+/* キャンセルボタンのスタイル */
+button.cancel {
+    background: linear-gradient(135deg, #f44336, #e53935); /* 赤いグラデーション */
+}
+
+button.cancel:hover {
+    background: linear-gradient(135deg, #e53935, #f44336); /* ホバー時に色を反転 */
+}
+
+/* 「次の会計に進む」ボタンのスタイル */
+button#nextOrderButton {
+    background: linear-gradient(135deg, #008CBA, #007BA7); /* 青色グラデーション */
+}
+
+button#nextOrderButton:hover {
+    background: linear-gradient(135deg, #007BA7, #008CBA); /* ホバー時に色を反転 */
+}
+
+/* 小さな操作ボタンのスタイル */
+.menu-plus, .menu-minus {
+    background: linear-gradient(135deg, #4CAF50, #45A049); /* 緑色グラデーション */
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+
+.menu-minus {
+    background: linear-gradient(135deg, #f44336, #e53935); /* 赤色グラデーション */
 }
